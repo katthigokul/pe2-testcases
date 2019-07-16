@@ -21,19 +21,21 @@ public class ReadcontextOfFileTest {
         readcontextOfFile = null;
     }
 
+    /* Test cases for Success*/
     @Test
-    public void testReadFileSuccessGivenFileNameAndExtensionShouldReturnByteArray() {
+    public void givenFileNameAndExtensionShouldReturnByteArray() {
         String testString = "Hello. This is a test string";
         byte[] testByteArray = testString.getBytes();
-        assertArrayEquals("testReadFileSuccessGivenFileNameAndExtensionShouldReturnByteArray: check readFile()",
-                testByteArray, readcontextOfFile.readFile("test", "txt"));
+        //Asserts
+        assertArrayEquals("successGivenFileNameAndExtensionShouldReturnByteArray: check readFile()",
+                testByteArray, readcontextOfFile.readFile("sample", "txt"));
     }
 
-
+/* Test cases for failures*/
 
     @Test(expected = FileNotFoundException.class)
-    public void testReadFileFailureGivenFileNameAndExtensionShouldReturnFileNotFoundException() {
-        readcontextOfFile.readFile("test1", "txt");
+    public void givenFileNameAndExtensionShouldReturnFileNotFoundException() {
+        readcontextOfFile.readFile("sample", "txt");
     }
 
 }
