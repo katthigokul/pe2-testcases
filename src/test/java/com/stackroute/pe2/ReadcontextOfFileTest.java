@@ -30,10 +30,7 @@ public class ReadcontextOfFileTest {
     }
 
 
-    /**
-     * Test for readFile() to throw FileNotFoundException
-     * when the wrong(non-existent) file path is given.
-     */
+
     @Test(expected = FileNotFoundException.class)
     public void testReadFileFailureGivenFileNameAndExtensionShouldReturnFileNotFoundException() {
         readcontextOfFile.readFile("test1", "txt");
