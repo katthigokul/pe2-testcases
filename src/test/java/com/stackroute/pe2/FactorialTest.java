@@ -41,7 +41,7 @@ public class FactorialTest {
 
     }
 
-/* Test cases in the Factorial
+/* Test cases if factorial value is Negative*/
 
     @Test
 
