@@ -10,39 +10,36 @@ public class GradesofStudentTest {
 
     private GradesofStudent gradesofStudent;
     @Before
-    public void setUp() {
-        gradesofStudent = new GradesofStudent();
-    }
+   public void setUp() {
+       gradesofStudent = new GradesofStudent();
+   }
 
-    @After
-    public void tearDown() {
-        gradesofStudent = null;
-    }
+   @After
+   public void tearDown() {
+       gradesofStudent = null;
+   }
 
-    @Test
-    public void testCalculateAverageGivenStudentGradesShouldReturnAverage() {
-        int[] testStudentGrades = {86, 65, 98, 77};
-        gradesofStudent.addStudentGrades(testStudentGrades);
-        assertEquals("testCalculateAverageGivenStudentGradesShouldReturnAverage: Check calculateAverage()",
-                81.50,
-                gradesofStudent.calculateAverage(),
-                0.0);
-    }
+   @Test
+   public void givenInputShouldReturnAverage() {
+       int[] testStudentGrades = {86, 65, 98, 77};
+       int AverageResult=gradesofStudent.calculateAverage(testStudentGrades);
+       assertEquals("81.50",AverageResult);
+   }
 
-    @Test
-    public void testMaximumGradeGivenStudentGradesShouldReturnMaximumGrade() {
-        int[] testStudentGrades = {86, 65, 98, 77};
-        gradesofStudent.addStudentGrades(testStudentGrades);
-        assertEquals("testMaximumGradeGivenStudentGradesShouldReturnMaximumGrade: check maximumGrade()",
-                98, gradesofStudent.maximumGrade());
-    }
+   @Test
+   public void givenInputShouldReturnMinimumGarde() {
+       int[] testStudentGrades = {86, 65, 98, 77};
+       int MinResult=gradesofStudent.minimumGrade(testStudentGrades);
+       assertEquals("65",MinResult);
+   }
 
-    @Test
-    public void testMinimumGradeGivenStudentGradesShouldReturnMinimumGrade() {
-        int[] testStudentGrades = {86, 65, 98, 77};
-        gradesofStudent.addStudentGrades(testStudentGrades);
-        assertEquals("testMinimumGradeGivenStudentGradesShouldReturnMinimumGrade: check minimumGrade()",
-                65, gradesofStudent.minimumGrade());
-    }
+   @Test
+   public void givenInputShouldReturnMaximumGarde() {
+       int[] testStudentGrades = {86, 65, 98, 77};
+       int MaxResult=gradesofStudent.maximumGrade(testStudentGrades);
+       assertEquals("98",MaxResult);
+
+
+   }
 
 }
