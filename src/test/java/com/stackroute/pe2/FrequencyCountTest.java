@@ -4,6 +4,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+
 import java.util.HashMap;
 
 import static org.junit.Assert.*;
@@ -22,21 +23,27 @@ public class FrequencyCountTest {
         frequencyCount = null;
     }
 
-    @Test
-    public void testCalculateWordFrequencySuccessGivenFilePathShouldReturnWordCount() {
-        HashMap<String, Integer> expectedWordCound = new HashMap<>();
-        expectedWordCound.put("i", 3);
-        expectedWordCound.put("am", 1);
-        expectedWordCound.put("like", 1);
-        expectedWordCound.put("have", 1);
-        expectedWordCound.put("a", 2);
-        assertEquals("testCalculateWordFrequencySuccessGivenFilePathShouldReturnWordCount: check calculateWordFrequency()",
-                expectedWordCound, frequencyCount.calculateWordFrequency("test_files/FileDemo.txt"));
-    }
+    /*Test cases for sucess*/
 
     @Test
-    public void testCalculateWordFrequencyFailureGivenFilePathShouldReturnNull() {
-        assertNull("testCalculateWordFrequencyFailureGivenFilePathShouldReturnNull: check calculateWordFrequency(). Should return null.",
-                frequencyCount.calculateWordFrequency("testFile.txt"));
+    public void sucessShouldReturnwordCount() {
+        HashMap<String, Integer> expectedWordCount = new HashMap<>();
+        expectedWordCount.put("i", 3);
+        expectedWordCount.put("am", 1);
+        expectedWordCount.put("like", 1);
+        expectedWordCount.put("have", 1);
+        expectedWordCount.put("a", 2);
+
+        //Asserts
+        assertEquals("sucessShouldReturnwordCount: check calculateWordFrequency()",
+                expectedWordCount, frequencyCount.calculateWordFrequency("Sample_files/FileDemo.txt"));
+    }
+    /*Test cases for Failure*/
+
+    @Test
+    public void failureReturnNull() {
+        //Asserts
+        assertNull("failureReturnNull: check calculateWordFrequency(). Should return null.",
+                frequencyCount.calculateWordFrequency("File.txt"));
     }
 }
