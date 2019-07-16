@@ -8,6 +8,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class FactorialTest {
+    Factorial factorial;
     @Before
     public void setUp() throws Exception {
 
@@ -19,10 +20,10 @@ public class FactorialTest {
 
     /* Test case to check the Factorial of int*/
     @Test
-    public void intFactorial() {
-        long number = 5L;
-        long expResult = 120L;
-        long result = Test2.factorial(number);
+    public void givenInputShouldRetunFactorial() {
+        int number = 5;
+        int expResult = 120;
+        int result = factorial.checkFactorial(number);
         //Asserts
         assertEquals(expResult, result);
     }
