@@ -11,11 +11,13 @@ public class FactorialTest {
     Factorial factorial;
     @Before
     public void setUp() throws Exception {
+        factorial=new Factorial();
 
     }
 
     @After
     public void tearDown() throws Exception {
+        factorial=null;
     }
 
     /* Test case to check the Factorial of int*/
@@ -33,11 +35,11 @@ public class FactorialTest {
     @Test
     public void longFactorial() {
     //Asserts
-        assertEquals(720, fact(6));
-        assertEquals(1, fact(0));
-        assertEquals(1, fact(1));
-        assertEquals(121645100408832000L, fact(19));
-        assertEquals(2432902008176640000L, fact(20));
+        assertEquals(720, factorial.fact(6));
+        assertEquals(1,factorial.fact(0));
+        assertEquals(1, factorial.fact(1));
+        assertEquals(121645100408832000L, factorial.fact(19));
+        assertEquals(2432902008176640000L, factorial.fact(20));
     }
 
     }
