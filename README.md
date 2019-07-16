@@ -1,4 +1,6 @@
-# pe2-testcases
+# pe2-testcases 
+
+Added test cases for the below mentioned the Problems
 
 1. Write a program, which reads number of students and n grades as input (of int
 between 0 and 100, inclusive) and displays the average, minimum and maximum.Your
