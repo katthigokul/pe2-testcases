@@ -1,3 +1,4 @@
+
 package com.stackroute.pe2;
 
 import org.junit.After;
@@ -20,7 +21,7 @@ public class FactorialTest {
         factorial=null;
     }
 
-    /* Test case to check the Factorial of int*/
+   /* Test case to check the Factorial of int */
     @Test
     public void givenInputShouldRetunFactorial() {
         int number = 5;
@@ -30,7 +31,7 @@ public class FactorialTest {
         assertEquals(expResult, result);
     }
 
-    /*Test case to check the LongFactorial*/
+   /* Test case to check the LongFactorial */
 
     @Test
     public void longFactorial() {
@@ -44,14 +45,13 @@ public class FactorialTest {
 
     }
 
-/* Test cases if factorial value is Negative*/
+ /*Test cases if factorial value is Negative */
 
-    @Test
+//    @Test
+//
+//    public void factorialNegative() {
+//        math.factorial(-1);
+//    }
 
-    public void factorialNegative() {
-        math.factorial(-1);
-    }
 
 
-
-}
